@@ -1,0 +1,17 @@
+Changelog Repetier 0.92 for Anycubic Kossel Plus
+
+20170617
+
+First version
+Based on this version for the regular sized kossel: https://github.com/ruevs/repetier_anycubic_kossel
+
+Changed #define DELTA_DIAGONAL_ROD 271.5 // mm 
+Changed #define DELTA_MAX_RADIUS 116
+Changed #define ROD_RADIUS 116
+Changed #define PRINTER_RADIUS 116
+Changed #define UI_SET_PRESET_HEATED_BED_TEMP_PLA 60
+Changed #define UI_SET_PRESET_EXTRUDER_TEMP_PLA   200
+Changed #define HAVE_HEATED_BED 1
+Changed #define UI_PRINTER_NAME "Anycubic Delta Repetier"
+Changed #define Z_MAX_LENGTH 280 (you'll need to change this yourself just like with the original anycubic firmware)
+Changed #define EEPROM_MODE 1 (you may need to manually save changed to eeprom in the menu after uploading new firmware)

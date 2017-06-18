@@ -1,5 +1,5 @@
 # Repetier-Anycubic-Kossel-Plus
-Repetier 0.92.9 for the Anycubic Kossel Plus, in my case the version with a 240mm heated bed and 240mm glass plate.
+Repetier 0.92.9 for the Anycubic Kossel Plus, the version with a 240mm heated bed and 240mm glass plate.
 
 Based on the excellent work of:
 

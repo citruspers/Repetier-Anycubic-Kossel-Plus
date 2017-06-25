@@ -9,6 +9,7 @@ Ruevs's custom repetier firmware for the non-plus Anycubic Kossel: https://githu
 
 Currently testing on my own Anycubic Kossel Plus, but, as always, use at your own risk. 
 
-Also, don't forget to manually set "#define Z_MAX_LENGTH" to a value that's appropriate for your printer. The default value of 280 is unlikely to cause a bed crash (my Z-height is somewhere around 288), but of course you'll still need to calibrate it just like with the original firmware.
+!! Don't forget to manually set "#define Z_MAX_LENGTH" to a value that's appropriate for your printer. !!
+!! Don't forget to increment EEPROM_MODE when upgrading from a previous installation/configuration !!
 
 TODO: Autoleveling with a spare endstop switch.

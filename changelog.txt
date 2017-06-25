@@ -1,5 +1,15 @@
 Changelog Repetier 0.92 for Anycubic Kossel Plus
 
+
+20170625
+
+Second version
+Basically changed the Delta rod parameters to get dimensionally accurate prints (at least to within 1 or 2 percent).
+Milestone: printed a 20x20x20 test cube and measured it at x20.07, y19.96, z20.02.
+
+Next up: bed leveling!
+
+
 20170617
 
 First version

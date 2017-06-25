@@ -282,7 +282,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z_HOME_DIR 1
 #define X_MAX_LENGTH 200
 #define Y_MAX_LENGTH 200
-#define Z_MAX_LENGTH 280
+#define Z_MAX_LENGTH 288.8
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
@@ -321,11 +321,11 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DELTA_DIAGONAL_CORRECTION_A 0
 #define DELTA_DIAGONAL_CORRECTION_B 0
 #define DELTA_DIAGONAL_CORRECTION_C 0
-#define END_EFFECTOR_HORIZONTAL_OFFSET 0
-#define CARRIAGE_HORIZONTAL_OFFSET 0
-#define DELTA_MAX_RADIUS 116
-#define ROD_RADIUS 116
-#define PRINTER_RADIUS 116
+#define END_EFFECTOR_HORIZONTAL_OFFSET 31
+#define CARRIAGE_HORIZONTAL_OFFSET 20.6
+#define DELTA_MAX_RADIUS 134.4
+#define ROD_RADIUS 134.4
+#define PRINTER_RADIUS 134.4
 #define DELTA_HOME_ON_POWER 0
 #define STEP_COUNTER
 #define DELTA_X_ENDSTOP_OFFSET_STEPS 0
@@ -404,7 +404,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define ACK_WITH_LINENUMBER 1
 #define WAITING_IDENTIFIER "wait"
 #define ECHO_ON_EXECUTE 1
-#define EEPROM_MODE 1
+#define EEPROM_MODE 10
 #undef PS_ON_PIN
 #define PS_ON_PIN ORIG_PS_ON_PIN
 #define JSON_OUTPUT 0

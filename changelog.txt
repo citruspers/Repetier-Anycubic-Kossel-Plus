@@ -1,5 +1,9 @@
 Changelog Repetier 0.92 for Anycubic Kossel Plus
 
+20170626
+
+Third version. Autoleveling now works AND stays within the printable area.
+Just the simple 3-point level measurement for now, no depth-map because that's not supported in 0.92.
 
 20170625
 

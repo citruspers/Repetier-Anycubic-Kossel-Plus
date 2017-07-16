@@ -286,7 +286,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define DISTORTION_CORRECTION 0
+#define DISTORTION_CORRECTION 1
 #define DISTORTION_CORRECTION_POINTS 5
 #define DISTORTION_CORRECTION_R 90
 #define DISTORTION_PERMANENT 1
@@ -445,7 +445,7 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_SPEED 20
 #define Z_PROBE_XY_SPEED 150
 #define Z_PROBE_SWITCHING_DISTANCE 1.5
-#define Z_PROBE_REPETITIONS 1
+#define Z_PROBE_REPETITIONS 3
 #define Z_PROBE_HEIGHT 19.6
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""

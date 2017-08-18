@@ -1,5 +1,11 @@
 Changelog Repetier 0.92 for Anycubic Kossel Plus
 
+20170818
+Modified delta rod length for better X and Y accuracy. Parts were printing ~2% too small despite my earlier calibrations, now a 20x20x20 cube is again printing at 19,96x20,00x20,2
+Changed the bed level routine to 3 checks per tower for better averaged results
+Changed the ABS quick settings to temperatures that suit PETG (I don't print ABS with this printer)
+Changed the probe offset so I don't need a manual Z offset in Slic3r anymore (hopefully)
+
 20170626
 
 Third version. Autoleveling now works AND stays within the printable area.

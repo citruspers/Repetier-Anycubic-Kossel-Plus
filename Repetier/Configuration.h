@@ -263,7 +263,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define ENDSTOP_X_BACK_ON_HOME 5
 #define ENDSTOP_Y_BACK_ON_HOME 5
 #define ENDSTOP_Z_BACK_ON_HOME 5
-#define ALWAYS_CHECK_ENDSTOPS 1
+#define ALWAYS_CHECK_ENDSTOPS 0 // DANGER! This is set to 0 to avoid endstop interference on the Anycubic Kossel. May want to enable this if you've never had big layer shifts.
 
 // ################# XYZ movements ###################
 
@@ -282,22 +282,22 @@ It also can add a delay to wait for spindle to run on full speed.
 #define Z_HOME_DIR 1
 #define X_MAX_LENGTH 200
 #define Y_MAX_LENGTH 200
-#define Z_MAX_LENGTH 288.8
+#define Z_MAX_LENGTH 270
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
 #define DISTORTION_CORRECTION 1
-#define DISTORTION_CORRECTION_POINTS 5
-#define DISTORTION_CORRECTION_R 90
+#define DISTORTION_CORRECTION_POINTS 12
+#define DISTORTION_CORRECTION_R 85 // your delta radius in mm
 #define DISTORTION_PERMANENT 1
 #define DISTORTION_UPDATE_FREQUENCY 15
-#define DISTORTION_START_DEGRADE 0.5
-#define DISTORTION_END_HEIGHT 1
-#define DISTORTION_EXTRAPOLATE_CORNERS 0
-#define DISTORTION_XMIN 10
-#define DISTORTION_YMIN 10
-#define DISTORTION_XMAX 190
-#define DISTORTION_YMAX 190
+#define DISTORTION_START_DEGRADE 2 // full correction until Z height
+#define DISTORTION_END_HEIGHT 4 //reduce correction until Z height
+#define DISTORTION_EXTRAPOLATE_CORNERS 1 
+#define DISTORTION_XMIN 0 // don't need these for delta's, leave empty
+#define DISTORTION_YMIN 0
+#define DISTORTION_XMAX 0
+#define DISTORTION_YMAX 0
 
 // ##########################################################################################
 // ##                           Movement settings                                          ##
@@ -312,7 +312,8 @@ It also can add a delay to wait for spindle to run on full speed.
 
 // Delta settings
 //#define DELTA_DIAGONAL_ROD 271.5 // mm old factory calibration
-#define DELTA_DIAGONAL_ROD 269 // mm
+//#define DELTA_DIAGONAL_ROD 269 // mm old my calibration v1
+#define DELTA_DIAGONAL_ROD 269 // length of the rods in mm center to center, affects geometry
 #define DELTA_ALPHA_A 210
 #define DELTA_ALPHA_B 330
 #define DELTA_ALPHA_C 90
@@ -323,10 +324,10 @@ It also can add a delay to wait for spindle to run on full speed.
 #define DELTA_DIAGONAL_CORRECTION_B 0
 #define DELTA_DIAGONAL_CORRECTION_C 0
 #define END_EFFECTOR_HORIZONTAL_OFFSET 31
-#define CARRIAGE_HORIZONTAL_OFFSET 20.6
+#define CARRIAGE_HORIZONTAL_OFFSET 20.6 // this one really doesn't seem to matter
 #define DELTA_MAX_RADIUS 118
-#define ROD_RADIUS 134.4
-#define PRINTER_RADIUS 134.4
+#define ROD_RADIUS 134.4 // horizontal distance between rod ends with effector centered, affects flatness?
+#define PRINTER_RADIUS 166 // Horizontal printable radius
 #define DELTA_HOME_ON_POWER 0
 #define STEP_COUNTER
 #define DELTA_X_ENDSTOP_OFFSET_STEPS 0
@@ -360,15 +361,15 @@ It also can add a delay to wait for spindle to run on full speed.
 #define STEP_DOUBLER_FREQUENCY 12000
 #define ALLOW_QUADSTEPPING 1
 #define DOUBLE_STEP_DELAY 0 // time in microseconds
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 3500
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 3500
-#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 3500
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 3500
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 3500
-#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 3500
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_X 2500
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Y 2500
+#define MAX_ACCELERATION_UNITS_PER_SQ_SECOND_Z 2500
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_X 3000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Y 3000
+#define MAX_TRAVEL_ACCELERATION_UNITS_PER_SQ_SECOND_Z 3000
 #define INTERPOLATE_ACCELERATION_WITH_Z 0
 #define ACCELERATION_FACTOR_TOP 100
-#define MAX_JERK 10
+#define MAX_JERK 8
 #define MAX_ZJERK 0.3
 #define PRINTLINE_CACHE_SIZE 16
 #define MOVE_CACHE_LOW 10
@@ -405,7 +406,7 @@ It also can add a delay to wait for spindle to run on full speed.
 #define ACK_WITH_LINENUMBER 1
 #define WAITING_IDENTIFIER "wait"
 #define ECHO_ON_EXECUTE 1
-#define EEPROM_MODE 29
+#define EEPROM_MODE 59
 #undef PS_ON_PIN
 #define PS_ON_PIN ORIG_PS_ON_PIN
 #define JSON_OUTPUT 0
@@ -436,29 +437,29 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define Z_PROBE_Z_OFFSET_MODE 0
 #define UI_BED_COATING 1
 #define FEATURE_Z_PROBE 1
-#define Z_PROBE_BED_DISTANCE 20
+#define Z_PROBE_BED_DISTANCE 5
 #define Z_PROBE_PIN ORIG_Z_MIN_PIN
 #define Z_PROBE_PULLUP 1
-#define Z_PROBE_ON_HIGH 1
+#define Z_PROBE_ON_HIGH 0
 #define Z_PROBE_X_OFFSET 0
 #define Z_PROBE_Y_OFFSET 0
 #define Z_PROBE_WAIT_BEFORE_TEST 0
-#define Z_PROBE_SPEED 20
-#define Z_PROBE_XY_SPEED 150
+#define Z_PROBE_SPEED 10
+#define Z_PROBE_XY_SPEED 100
 #define Z_PROBE_SWITCHING_DISTANCE 1.5
 #define Z_PROBE_REPETITIONS 3
-#define Z_PROBE_HEIGHT 18.65
+#define Z_PROBE_HEIGHT 0.3
 #define Z_PROBE_START_SCRIPT ""
 #define Z_PROBE_FINISHED_SCRIPT ""
 #define Z_PROBE_REQUIRES_HEATING 0
 #define Z_PROBE_MIN_TEMPERATURE 0
 #define FEATURE_AUTOLEVEL 1
-#define Z_PROBE_X1 -60
-#define Z_PROBE_Y1 -40
-#define Z_PROBE_X2 60
-#define Z_PROBE_Y2 -40
+#define Z_PROBE_X1 -80
+#define Z_PROBE_Y1 -47
+#define Z_PROBE_X2 80
+#define Z_PROBE_Y2 -48
 #define Z_PROBE_X3 0
-#define Z_PROBE_Y3 80
+#define Z_PROBE_Y3 111
 #define BED_LEVELING_METHOD 0
 #define BED_CORRECTION_METHOD 0
 #define BED_LEVELING_GRID_SIZE 5
@@ -505,15 +506,15 @@ WARNING: Servos can draw a considerable amount of current. Make sure your system
 #define LANGUAGE_CZ_ACTIVE 0
 #define LANGUAGE_PL_ACTIVE 0
 #define LANGUAGE_TR_ACTIVE 0
-#define UI_PRINTER_NAME "Delta Repetier"
-#define UI_PRINTER_COMPANY "Anycubic"
+#define UI_PRINTER_NAME "Kossel Repetier"
+#define UI_PRINTER_COMPANY "Citruspers"
 #define UI_PAGES_DURATION 5000
 #define UI_ANIMATION 0
 #define UI_SPEEDDEPENDENT_POSITIONING 0
 #define UI_DISABLE_AUTO_PAGESWITCH 1
 #define UI_AUTORETURN_TO_MENU_AFTER 30000
 #define FEATURE_UI_KEYS 0
-#define UI_ENCODER_SPEED 1
+#define UI_ENCODER_SPEED 2
 #define UI_REVERSE_ENCODER 1
 #define UI_KEY_BOUNCETIME 10
 #define UI_KEY_FIRST_REPEAT 500

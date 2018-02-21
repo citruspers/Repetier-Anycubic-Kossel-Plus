@@ -1,16 +1,13 @@
 Changelog Repetier 0.92 for Anycubic Kossel Plus
 
-20170913
+20180221
 
-Minor changes in leveling probe offset (you may need to go 0.05mm lower still for PETG, possibly more for PLA)
-Changed acceleration and jerk values to 3500 and 10 to reduce the risk of missed steps
-Reversed encoder direction to match Marlin
-
-20170818
-Modified delta rod length for better X and Y accuracy. Parts were printing ~2% too small despite my earlier calibrations, now a 20x20x20 cube is again printing at 19,96x20,00x20,2
-Changed the bed level routine to 3 checks per tower for better averaged results
-Changed the ABS quick settings to temperatures that suit PETG (I don't print ABS with this printer)
-Changed the probe offset so I don't need a manual Z offset in Slic3r anymore (hopefully)
+"I think it's actually done" edition
+Implemented bed correction for much better first layers
+Commented some values in configuration.h for better readability
+Disabled endstop measurements during print (caused MANY failed prints due to EMI, but may break yoru printer if you're trying to print beyond your maximum Z-height)
+Added full autolevel gcode script
+Fixed encoder stepping (no more accidental doubleclicks)
 
 20170626
 
